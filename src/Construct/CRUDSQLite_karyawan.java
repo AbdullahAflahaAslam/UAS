@@ -41,9 +41,9 @@ public class CRUDSQLite_karyawan implements CRUDInterface_karyawan {
             kr.setTanggallahir(rs.getString(5));
             kr.setJeniskelamin(rs.getString(6));
             kr.setAlamat(rs.getString(7));
-            kr.setNotelp(rs.getInt(8));
+            kr.setNotelp(rs.getString(8));
             kr.setStatus(rs.getString(9));
-            kr.setNoidentitas(rs.getInt(10));
+            kr.setNoidentitas(rs.getString(10));
             list.add(kr);
         }
         return list;
@@ -51,7 +51,7 @@ public class CRUDSQLite_karyawan implements CRUDInterface_karyawan {
 
     @Override
     public karyawan readById(int id) throws SQLException {
-        PreparedStatement ps = konek.prepareStatement("select * form karyawan where id = ?");
+        PreparedStatement ps = konek.prepareStatement("select * from karyawan where id_karyawan = ?");
         ps.setInt(1, id);
         ResultSet rs = ps.executeQuery();
         karyawan kr = new karyawan();
@@ -63,16 +63,16 @@ public class CRUDSQLite_karyawan implements CRUDInterface_karyawan {
             kr.setTanggallahir(rs.getString(5));
             kr.setJeniskelamin(rs.getString(6));
             kr.setAlamat(rs.getString(7));
-            kr.setNotelp(rs.getInt(8));
+            kr.setNotelp(rs.getString(8));
             kr.setStatus(rs.getString(9));
-            kr.setNoidentitas(rs.getInt(10));
+            kr.setNoidentitas(rs.getString(10));
         }
         return kr;
     }
 
     @Override
     public void create(karyawan ba) throws SQLException {
-        String query = "insert into karyawan (id_karyawan, Nama_Depan, Nama_Belakang,Tempat_Lahir,Tanggal_Lahir, Jenis_Kelamin, Alamat,No_Telp,Status,No_Idenetitas) values (?,?,?,?,?,?,?,?)";
+        String query = "insert into karyawan (Nama_Depan, Nama_Belakang, Tempat_Lahir, Tanggal_Lahir, Jenis_Kelamin, Alamat, No_Telp, Status, No_Identitas) values (?,?,?,?,?,?,?,?,?)";
         PreparedStatement kr = konek.prepareStatement(query);
 
         kr.setString(1, ba.getNamadepan());
@@ -81,33 +81,33 @@ public class CRUDSQLite_karyawan implements CRUDInterface_karyawan {
         kr.setString(4, ba.getTanggallahir());
         kr.setString(5, ba.getJeniskelamin());
         kr.setString(6, ba.getAlamat());
-        kr.setInt(7, ba.getNotelp());
+        kr.setString(7, ba.getNotelp());
         kr.setString(8, ba.getStatus());
-        kr.setInt(9, ba.getNoidentitas());
+        kr.setString(9, ba.getNoidentitas());
         kr.execute();
     }
 
     @Override
     public void delete(karyawan ba) throws SQLException {
-        PreparedStatement kr = konek.prepareStatement("delete from karyawan where id=?");
+        PreparedStatement kr = konek.prepareStatement("delete from karyawan where id_karyawan=?");
         kr.setInt(1, ba.getId());
         kr.execute();
     }
 
     @Override
     public void update(karyawan ba) throws SQLException {
-        String query = "update karyawan set Nama_Depan=?, Nama_Belakang=?, Tempat_Lahir=?, Jenis_Kelamin=?, Alamat=?, No_Telp=?,Status=?,No_Identitas=? where id=?";
+        String query = "update karyawan set Nama_Depan=?, Nama_Belakang=?, Tempat_Lahir=?, Jenis_Kelamin=?, Alamat=?, No_Telp=?, Status=?, No_Identitas=? where id_karyawan=?";
         PreparedStatement kr = konek.prepareStatement(query);
-        kr.setInt(1, ba.getId());
         kr.setString(1, ba.getNamadepan());
         kr.setString(2, ba.getNamabelakang());
         kr.setString(3, ba.getTempatlahir());
         kr.setString(4, ba.getTanggallahir());
         kr.setString(5, ba.getJeniskelamin());
         kr.setString(6, ba.getAlamat());
-        kr.setInt(7, ba.getNotelp());
+        kr.setString(7, ba.getNotelp());
         kr.setString(8, ba.getStatus());
-        kr.setInt(9, ba.getNoidentitas());
+        kr.setString(9, ba.getNoidentitas());
+        kr.setInt(10, ba.getId());
         kr.execute();
     }
     
