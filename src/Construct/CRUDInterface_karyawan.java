@@ -5,8 +5,8 @@
  */
 package Construct;
 
-import java.sql.SQLException;
-import java.util.ArrayList;
+import java.sql.*;
+import java.util.*;
 
 /**
  *

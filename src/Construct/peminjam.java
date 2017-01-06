@@ -17,14 +17,14 @@ public class peminjam {
     private String tanggallahir;
     private String jeniskelamin;
     private String alamat;
-    private int notelp;
+    private String notelp;
     private String status;
-    private int noidentitas;
+    private String noidentitas;
 
     public peminjam() {
     }
 
-    public peminjam(int id, String namadepan, String namabelakang, String tempatlahir, String tanggallahir, String jeniskelamin, String alamat, int notelp, String status, int noidentitas) {
+    public peminjam(int id, String namadepan, String namabelakang, String tempatlahir, String tanggallahir, String jeniskelamin, String alamat, String notelp, String status, String noidentitas) {
         this.id = id;
         this.namadepan = namadepan;
         this.namabelakang = namabelakang;
@@ -93,11 +93,11 @@ public class peminjam {
         this.alamat = alamat;
     }
 
-    public int getNotelp() {
+    public String getNotelp() {
         return notelp;
     }
 
-    public void setNotelp(int notelp) {
+    public void setNotelp(String notelp) {
         this.notelp = notelp;
     }
 
@@ -109,11 +109,11 @@ public class peminjam {
         this.status = status;
     }
 
-    public int getNoidentitas() {
+    public String getNoidentitas() {
         return noidentitas;
     }
 
-    public void setNoidentitas(int noidentitas) {
+    public void setNoidentitas(String noidentitas) {
         this.noidentitas = noidentitas;
     }
     

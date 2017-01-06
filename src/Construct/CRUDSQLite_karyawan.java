@@ -10,7 +10,7 @@ import java.util.*;
 
 /**
  *
- * @author Imbisil
+* @author abdullah aflaha aslam
  */
 public class CRUDSQLite_karyawan implements CRUDInterface_karyawan {
 
@@ -96,7 +96,7 @@ public class CRUDSQLite_karyawan implements CRUDInterface_karyawan {
 
     @Override
     public void update(karyawan ba) throws SQLException {
-        String query = "update karyawan set Nama_Depan=?, Nama_Belakang=?, Tempat_Lahir=?, Jenis_Kelamin=?, Alamat=?, No_Telp=?, Status=?, No_Identitas=? where id_karyawan=?";
+        String query = "update karyawan set Nama_Depan=?, Nama_Belakang=?, Tempat_Lahir=?, Tanggal_Lahir=?, Jenis_Kelamin=?, Alamat=?, No_Telp=?, Status=?, No_Identitas=? where id_karyawan=?";
         PreparedStatement kr = konek.prepareStatement(query);
         kr.setString(1, ba.getNamadepan());
         kr.setString(2, ba.getNamabelakang());
