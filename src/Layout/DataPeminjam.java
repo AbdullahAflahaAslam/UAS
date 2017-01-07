@@ -592,7 +592,7 @@ public class DataPeminjam extends javax.swing.JFrame {
             }
         });
 
-        btkembali.setText("Kembali");
+        btkembali.setText("Data Karyawan");
         btkembali.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btkembaliActionPerformed(evt);
@@ -615,7 +615,7 @@ public class DataPeminjam extends javax.swing.JFrame {
                         .addComponent(bthapus)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btkembali)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(18, 18, 18)
                         .addComponent(btkeluar))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -710,7 +710,7 @@ public class DataPeminjam extends javax.swing.JFrame {
                     .addComponent(bthapus)
                     .addComponent(btkeluar)
                     .addComponent(btkembali))
-                .addContainerGap(60, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();

@@ -417,7 +417,7 @@
                       <Component id="bthapus" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="btkembali" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="btkeluar" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
@@ -535,7 +535,7 @@
                   <Component id="btkeluar" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btkembali" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="60" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -722,7 +722,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="btkembali">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Kembali"/>
+        <Property name="text" type="java.lang.String" value="Data Karyawan"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btkembaliActionPerformed"/>

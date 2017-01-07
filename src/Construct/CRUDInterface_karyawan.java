@@ -28,4 +28,5 @@ public interface CRUDInterface_karyawan {
 
     public void update(karyawan ba) throws SQLException;
 
+  
 }
